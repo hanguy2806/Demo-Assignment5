@@ -65,8 +65,8 @@
             this.CancelButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Your = new System.Windows.Forms.Label();
-            this.infoLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -377,9 +377,9 @@
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(453, 430);
+            this.CancelButton.Location = new System.Drawing.Point(489, 475);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(144, 50);
+            this.CancelButton.Size = new System.Drawing.Size(103, 39);
             this.CancelButton.TabIndex = 1;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -397,31 +397,29 @@
             // Your
             // 
             this.Your.AutoSize = true;
-            this.Your.Location = new System.Drawing.Point(7, 451);
+            this.Your.Location = new System.Drawing.Point(40, 406);
             this.Your.Name = "Your";
             this.Your.Size = new System.Drawing.Size(179, 29);
             this.Your.TabIndex = 3;
             this.Your.Text = "Your selecction";
             // 
-            // infoLabel
-            // 
-            this.infoLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.infoLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.infoLabel.Location = new System.Drawing.Point(215, 451);
-            this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(232, 29);
-            this.infoLabel.TabIndex = 4;
-            this.infoLabel.Text = "(Product Label)";
-            // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(620, 430);
+            this.NextButton.Location = new System.Drawing.Point(620, 475);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(144, 50);
+            this.NextButton.Size = new System.Drawing.Size(103, 39);
             this.NextButton.TabIndex = 1;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(225, 395);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(498, 35);
+            this.textBox1.TabIndex = 4;
             // 
             // SelectForm
             // 
@@ -429,7 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 544);
             this.ControlBox = false;
-            this.Controls.Add(this.infoLabel);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Your);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NextButton);
@@ -487,7 +485,7 @@
         private System.Windows.Forms.Button CancelButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Your;
-        private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
