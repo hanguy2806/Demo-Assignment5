@@ -34,7 +34,7 @@ namespace COMP123_Summer2019
             productInfoForm = new ProductInfoForm();
             aboutForm = new AboutForm();
             product = new Product();
-            Application.Run(selectForm);
+            Application.Run(splashForm);
         }
     }
 }

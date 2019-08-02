@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Drawing.Printing;
 namespace COMP123_Summer2019.Views
 {
     public partial class OrderForm : Form
@@ -15,6 +15,30 @@ namespace COMP123_Summer2019.Views
         public OrderForm()
         {
             InitializeComponent();
+        }
+
+        private void PrintToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductsPrintForm.PrintAction = PrintAction.PrintToPreview;
+            ProductsPrintForm.Print();
+        }
+
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.aboutForm.ShowDialog();
+        }
+
+       
+
+        private void BackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.productInfoForm.Show();
         }
     }
 }

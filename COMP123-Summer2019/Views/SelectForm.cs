@@ -19,6 +19,11 @@ namespace COMP123_Summer2019.Views
             InitializeComponent();
         }
 
+        public bool isConnectedToDatabase()
+        {
+            return false;
+        }
+
         private void SelectForm_Load(object sender, EventArgs e)
         {
             using (var db = new DollarComputersContext())
@@ -31,6 +36,12 @@ namespace COMP123_Summer2019.Views
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.productInfoForm.Show();
         }
     }
 }
