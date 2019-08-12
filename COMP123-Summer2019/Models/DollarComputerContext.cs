@@ -5,10 +5,10 @@ namespace COMP123_Summer2019.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class DollarComputersContext : DbContext
+    public partial class DollarComputerContext : DbContext
     {
-        public DollarComputersContext()
-            : base("name=DollarComputersConnection")
+        public DollarComputerContext()
+            : base("name=DollarComputerConnection")
         {
         }
 

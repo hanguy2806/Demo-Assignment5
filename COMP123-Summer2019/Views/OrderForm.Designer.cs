@@ -86,6 +86,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.shapeContainer2 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.computerPrintForm = new Microsoft.VisualBasic.PowerPacks.Printing.PrintForm(this.components);
             this.OrderFormMenuStrip.SuspendLayout();
             this.SystemComponentGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -157,7 +158,7 @@
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(193, 30);
             this.backToolStripMenuItem.Text = "&Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -173,12 +174,12 @@
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(249, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(155, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(158, 30);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
@@ -651,6 +652,14 @@
             this.shapeContainer2.TabIndex = 2;
             this.shapeContainer2.TabStop = false;
             // 
+            // computerPrintForm
+            // 
+            this.computerPrintForm.DocumentName = "document";
+            this.computerPrintForm.Form = this;
+            this.computerPrintForm.PrintAction = System.Drawing.Printing.PrintAction.PrintToPrinter;
+            this.computerPrintForm.PrinterSettings = ((System.Drawing.Printing.PrinterSettings)(resources.GetObject("computerPrintForm.PrinterSettings")));
+            this.computerPrintForm.PrintFileName = null;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -739,5 +748,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer2;
+        private Microsoft.VisualBasic.PowerPacks.Printing.PrintForm computerPrintForm;
     }
 }

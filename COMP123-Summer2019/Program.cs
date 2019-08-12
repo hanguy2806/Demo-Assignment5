@@ -18,6 +18,7 @@ namespace COMP123_Summer2019
         public static ProductInfoForm productInfoForm;
         public static AboutForm aboutForm;
         public static OrderForm orderForm;
+  
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

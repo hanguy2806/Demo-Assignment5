@@ -62,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DollarComputersContext.cs" />
+    <Compile Include="Models\DollarComputerContext.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Views\AboutForm.cs">
       <SubType>Form</SubType>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,5 +39,19 @@ namespace COMP123_Summer2019.Views
             this.Hide();
             Program.orderForm.Show();
         }
+
+        private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //configure the file diaglog
+            ComputerOpenFileDialog.FileName = "computer.txt";
+            ComputerOpenFileDialog.InitialDirectory =Directory.GetCurrentDirectory();
+            ComputerOpenFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+            //open file dialog
+            ComputerOpenFileDialog.ShowDialog();
+            
+        }
+
+       
     }
 }

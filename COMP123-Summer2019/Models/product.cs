@@ -5,7 +5,13 @@ namespace COMP123_Summer2019.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    enum ProductField
+    {
+        ID,
+        COST,
+        MANUFACTURER,
+        MODEL
+    }
     public partial class Product
     {
         public short productID { get; set; }

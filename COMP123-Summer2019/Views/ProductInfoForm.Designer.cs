@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductInfoForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,9 +76,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ComputerOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.computerSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip1.SuspendLayout();
             this.TechSpecsGroupBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -106,19 +115,20 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.openToolStripMenuItem.Text = "&Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.saveToolStripMenuItem.Text = "&Save";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -138,7 +148,7 @@
             // 
             // ProductIdLabel
             // 
-            this.ProductIdLabel.Location = new System.Drawing.Point(16, 48);
+            this.ProductIdLabel.Location = new System.Drawing.Point(18, 69);
             this.ProductIdLabel.Name = "ProductIdLabel";
             this.ProductIdLabel.Size = new System.Drawing.Size(96, 30);
             this.ProductIdLabel.TabIndex = 1;
@@ -148,7 +158,7 @@
             // ProductIdLabelData
             // 
             this.ProductIdLabelData.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ProductIdLabelData.Location = new System.Drawing.Point(117, 51);
+            this.ProductIdLabelData.Location = new System.Drawing.Point(119, 72);
             this.ProductIdLabelData.Name = "ProductIdLabelData";
             this.ProductIdLabelData.Size = new System.Drawing.Size(101, 30);
             this.ProductIdLabelData.TabIndex = 1;
@@ -156,7 +166,7 @@
             // 
             // ConditionLabel
             // 
-            this.ConditionLabel.Location = new System.Drawing.Point(240, 51);
+            this.ConditionLabel.Location = new System.Drawing.Point(242, 72);
             this.ConditionLabel.Name = "ConditionLabel";
             this.ConditionLabel.Size = new System.Drawing.Size(100, 30);
             this.ConditionLabel.TabIndex = 1;
@@ -166,7 +176,7 @@
             // ConditionDataLabel
             // 
             this.ConditionDataLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ConditionDataLabel.Location = new System.Drawing.Point(341, 48);
+            this.ConditionDataLabel.Location = new System.Drawing.Point(343, 69);
             this.ConditionDataLabel.Name = "ConditionDataLabel";
             this.ConditionDataLabel.Size = new System.Drawing.Size(117, 30);
             this.ConditionDataLabel.TabIndex = 1;
@@ -175,7 +185,7 @@
             // CostDataLabel
             // 
             this.CostDataLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CostDataLabel.Location = new System.Drawing.Point(539, 47);
+            this.CostDataLabel.Location = new System.Drawing.Point(541, 68);
             this.CostDataLabel.Name = "CostDataLabel";
             this.CostDataLabel.Size = new System.Drawing.Size(107, 30);
             this.CostDataLabel.TabIndex = 1;
@@ -201,7 +211,7 @@
             this.TechSpecsGroupBox.Controls.Add(this.label6);
             this.TechSpecsGroupBox.Controls.Add(this.ManufacturerLabel);
             this.TechSpecsGroupBox.Controls.Add(this.PLatFormLabel);
-            this.TechSpecsGroupBox.Location = new System.Drawing.Point(20, 236);
+            this.TechSpecsGroupBox.Location = new System.Drawing.Point(16, 256);
             this.TechSpecsGroupBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TechSpecsGroupBox.Name = "TechSpecsGroupBox";
             this.TechSpecsGroupBox.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -391,11 +401,11 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(11, 79);
+            this.groupBox1.Location = new System.Drawing.Point(15, 114);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.groupBox1.Size = new System.Drawing.Size(746, 136);
+            this.groupBox1.Size = new System.Drawing.Size(738, 136);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product Info";
@@ -477,9 +487,9 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(16, 436);
+            this.label3.Location = new System.Drawing.Point(16, 453);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(323, 37);
+            this.label3.Size = new System.Drawing.Size(323, 29);
             this.label3.TabIndex = 3;
             this.label3.Text = "Click Next to Confirm Your Selection";
             // 
@@ -515,7 +525,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(464, 51);
+            this.label4.Location = new System.Drawing.Point(466, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 30);
             this.label4.TabIndex = 1;
@@ -524,7 +534,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(464, 51);
+            this.label5.Location = new System.Drawing.Point(466, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 30);
             this.label5.TabIndex = 1;
@@ -534,11 +544,58 @@
             // label11
             // 
             this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(551, 47);
+            this.label11.Location = new System.Drawing.Point(553, 68);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 30);
             this.label11.TabIndex = 1;
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripButton,
+            this.saveToolStripButton,
+            this.toolStripSeparator,
+            this.toolStripSeparator1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(778, 31);
+            this.toolStrip1.TabIndex = 5;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // openToolStripButton
+            // 
+            this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
+            this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.openToolStripButton.Name = "openToolStripButton";
+            this.openToolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.openToolStripButton.Text = "&Open";
+            this.openToolStripButton.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
+            // 
+            // saveToolStripButton
+            // 
+            this.saveToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("saveToolStripButton.Image")));
+            this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.saveToolStripButton.Name = "saveToolStripButton";
+            this.saveToolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.saveToolStripButton.Text = "&Save";
+            // 
+            // toolStripSeparator
+            // 
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // ComputerOpenFileDialog
+            // 
+            this.ComputerOpenFileDialog.FileName = "openFileDialog1";
             // 
             // ProductInfoForm
             // 
@@ -546,6 +603,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(778, 544);
             this.ControlBox = false;
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.SelectAnotherProductButton);
@@ -570,6 +628,8 @@
             this.menuStrip1.PerformLayout();
             this.TechSpecsGroupBox.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,5 +684,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton openToolStripButton;
+        private System.Windows.Forms.ToolStripButton saveToolStripButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.OpenFileDialog ComputerOpenFileDialog;
+        private System.Windows.Forms.SaveFileDialog computerSaveFileDialog;
     }
 }

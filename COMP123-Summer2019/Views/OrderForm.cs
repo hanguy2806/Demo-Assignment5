@@ -21,6 +21,7 @@ namespace COMP123_Summer2019.Views
         {
             ProductsPrintForm.PrintAction = PrintAction.PrintToPreview;
             ProductsPrintForm.Print();
+            MessageBox.Show("Your order is printing !");
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
