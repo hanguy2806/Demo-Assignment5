@@ -7,7 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * STUDENT NAME: THI THU HA NGUYEN
+ * ID:301017727
+ * DESCRIPTION: this is start form with 3 options.
+ */
 namespace COMP123_Summer2019.Views
 {
     public partial class StartForm : Form

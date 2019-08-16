@@ -5,7 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * STUDENT NAME: THI THU HA NGUYEN
+ * ID:301017727
+ * DESCRIPTION: this is main program which launch the project.
+ */
 namespace COMP123_Summer2019
 {
    public static class Program

@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*
+ * STUDENT NAME: THI THU HA NGUYEN
+ * ID:301017727
+ * DESCRIPTION: this is product information form get all the information from selected item.
+ */
 
 namespace COMP123_Summer2019.Views
 {

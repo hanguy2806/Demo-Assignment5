@@ -5,6 +5,11 @@ namespace COMP123_Summer2019.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+  /*
+  * STUDENT NAME: THI THU HA NGUYEN
+  * ID:301017727
+  * DESCRIPTION: this is product class. an enum is also created to get the index of field.
+  */
     enum ProductField
     {
         ID, COST, MANUFACTURER, MODEL, RAM_type,RAM_size,

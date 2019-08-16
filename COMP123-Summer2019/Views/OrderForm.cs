@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+/*
+ * STUDENT NAME: THI THU HA NGUYEN
+ * ID:301017727
+ * DESCRIPTION: this is order form which displays the inf4 as well as the total of payment
+ */
 namespace COMP123_Summer2019.Views
 {
     public partial class OrderForm : Form
