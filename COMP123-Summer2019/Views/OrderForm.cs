@@ -41,5 +41,32 @@ namespace COMP123_Summer2019.Views
             this.Hide();
             Program.productInfoForm.Show();
         }
+
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for your business!\n\nYour order will be processed in 7-10 business days.");
+            Application.Exit();
+        }
+
+        private void OrderForm_Load(object sender, EventArgs e)
+        {
+            ConditionDataLabel.Text = Program.product.condition;
+            PlatformDataLabel.Text = Program.product.platform;
+            ManufacturerDataLabel.Text = Program.product.manufacturer;
+            ModelDataLabel.Text = Program.product.model;
+            lcdSizeDataLabel.Text = Program.product.screensize;
+            memoryDataLabel.Text = Program.product.RAM_size;
+            cpuBrandDataLabel.Text = Program.product.CPU_brand;
+            cpuTypeDataLabel.Text = Program.product.CPU_type;
+            cpuNoDataLabel.Text = Program.product.CPU_number;
+            cpuSpeedDataLabel.Text = Program.product.CPU_speed;
+            hddDataLabel.Text = Program.product.HDD_size;
+            gpuDataLabel.Text = Program.product.GPU_Type;
+            webcamDataLabel.Text = Program.product.webcam;
+            osDataLabel.Text = Program.product.OS;
+            priceDataLabel.Text = Program.product.cost.ToString();
+            taxDataLabel.Text = (Program.product.cost * (decimal)0.13).ToString();
+            totalDataLabel.Text= (Program.product.cost * (decimal)1.13).ToString();
+        }
     }
 }

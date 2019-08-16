@@ -52,7 +52,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.HDDLabel = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.memoryDataLabel = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.CPUBrandDataLabel = new System.Windows.Forms.Label();
             this.LCDLabel = new System.Windows.Forms.Label();
@@ -63,9 +63,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.OSDataLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ModelLabel = new System.Windows.Forms.Label();
+            this.ModelDataLabel = new System.Windows.Forms.Label();
             this.ManufacturerDataLabel = new System.Windows.Forms.Label();
-            this.PlatfromDataLabel = new System.Windows.Forms.Label();
+            this.PlatformDataLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -75,7 +75,6 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -115,7 +114,7 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
@@ -124,11 +123,12 @@
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 30);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
@@ -145,6 +145,7 @@
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(278, 30);
             this.selectAnotherProductToolStripMenuItem.Text = "Se&lect Another Product";
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
             // ProductIdLabel
             // 
@@ -203,7 +204,7 @@
             this.TechSpecsGroupBox.Controls.Add(this.label1);
             this.TechSpecsGroupBox.Controls.Add(this.label10);
             this.TechSpecsGroupBox.Controls.Add(this.HDDLabel);
-            this.TechSpecsGroupBox.Controls.Add(this.label17);
+            this.TechSpecsGroupBox.Controls.Add(this.memoryDataLabel);
             this.TechSpecsGroupBox.Controls.Add(this.label18);
             this.TechSpecsGroupBox.Controls.Add(this.CPUBrandDataLabel);
             this.TechSpecsGroupBox.Controls.Add(this.LCDLabel);
@@ -316,15 +317,15 @@
             this.HDDLabel.Text = "HDD";
             this.HDDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label17
+            // memoryDataLabel
             // 
-            this.label17.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label17.Location = new System.Drawing.Point(106, 33);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(101, 30);
-            this.label17.TabIndex = 1;
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.memoryDataLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.memoryDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.memoryDataLabel.Location = new System.Drawing.Point(106, 33);
+            this.memoryDataLabel.Name = "memoryDataLabel";
+            this.memoryDataLabel.Size = new System.Drawing.Size(101, 30);
+            this.memoryDataLabel.TabIndex = 1;
+            this.memoryDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label18
             // 
@@ -395,9 +396,9 @@
             // 
             this.groupBox1.Controls.Add(this.OSDataLabel);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.ModelLabel);
+            this.groupBox1.Controls.Add(this.ModelDataLabel);
             this.groupBox1.Controls.Add(this.ManufacturerDataLabel);
-            this.groupBox1.Controls.Add(this.PlatfromDataLabel);
+            this.groupBox1.Controls.Add(this.PlatformDataLabel);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label9);
@@ -429,15 +430,15 @@
             this.label2.Text = "OS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // ModelLabel
+            // ModelDataLabel
             // 
-            this.ModelLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ModelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ModelLabel.Location = new System.Drawing.Point(321, 86);
-            this.ModelLabel.Name = "ModelLabel";
-            this.ModelLabel.Size = new System.Drawing.Size(381, 30);
-            this.ModelLabel.TabIndex = 1;
-            this.ModelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ModelDataLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ModelDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ModelDataLabel.Location = new System.Drawing.Point(321, 86);
+            this.ModelDataLabel.Name = "ModelDataLabel";
+            this.ModelDataLabel.Size = new System.Drawing.Size(381, 30);
+            this.ModelDataLabel.TabIndex = 1;
+            this.ModelDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ManufacturerDataLabel
             // 
@@ -449,15 +450,15 @@
             this.ManufacturerDataLabel.TabIndex = 1;
             this.ManufacturerDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // PlatfromDataLabel
+            // PlatformDataLabel
             // 
-            this.PlatfromDataLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PlatfromDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PlatfromDataLabel.Location = new System.Drawing.Point(106, 32);
-            this.PlatfromDataLabel.Name = "PlatfromDataLabel";
-            this.PlatfromDataLabel.Size = new System.Drawing.Size(101, 30);
-            this.PlatfromDataLabel.TabIndex = 1;
-            this.PlatfromDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.PlatformDataLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PlatformDataLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.PlatformDataLabel.Location = new System.Drawing.Point(106, 32);
+            this.PlatformDataLabel.Name = "PlatformDataLabel";
+            this.PlatformDataLabel.Size = new System.Drawing.Size(101, 30);
+            this.PlatformDataLabel.TabIndex = 1;
+            this.PlatformDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label7
             // 
@@ -511,7 +512,7 @@
             this.CancelButton.TabIndex = 4;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
-            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            this.CancelButton.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // NextButton
             // 
@@ -540,15 +541,6 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Cost";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(553, 68);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 30);
-            this.label11.TabIndex = 1;
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // toolStrip1
             // 
@@ -582,6 +574,7 @@
             this.saveToolStripButton.Name = "saveToolStripButton";
             this.saveToolStripButton.Size = new System.Drawing.Size(28, 28);
             this.saveToolStripButton.Text = "&Save";
+            this.saveToolStripButton.Click += new System.EventHandler(this.SaveToolStripButton_Click);
             // 
             // toolStripSeparator
             // 
@@ -610,7 +603,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TechSpecsGroupBox);
-            this.Controls.Add(this.label11);
             this.Controls.Add(this.CostDataLabel);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.ConditionDataLabel);
@@ -620,10 +612,12 @@
             this.Controls.Add(this.ProductIdLabel);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
+            this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.TechSpecsGroupBox.ResumeLayout(false);
@@ -657,9 +651,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label OSDataLabel;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label ModelLabel;
+        private System.Windows.Forms.Label ModelDataLabel;
         private System.Windows.Forms.Label ManufacturerDataLabel;
-        private System.Windows.Forms.Label PlatfromDataLabel;
+        private System.Windows.Forms.Label PlatformDataLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -671,7 +665,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label CPUTypeDataLabel;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label memoryDataLabel;
         private System.Windows.Forms.Label CPUBrandDataLabel;
         private System.Windows.Forms.Label CPUSpeedDataLabel;
         private System.Windows.Forms.Label label18;
@@ -683,7 +677,6 @@
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton openToolStripButton;
         private System.Windows.Forms.ToolStripButton saveToolStripButton;
